@@ -1,0 +1,23 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix voc: <http://www.unice.fr/voc#> .
+@prefix : <http://www.unice.fr/data#> .
+:Jen
+  a voc:Woman ;
+  voc:name "Jen" ;
+  voc:age 42 ;
+  voc:hasSpouse :Seb ;
+  voc:hasChild :Steffen, :Anny ;
+  rdf:Type voc:Engineer .
+
+:Anny
+  voc:name "Anny" ;
+  a voc:Woman .
+
+:Seb
+  a voc:Man ;
+  voc:name "Seb" ;
+  voc:hasChild :Steffen, :Anny .
+
+:Steffen
+  a voc:Man ;
+  voc:name "Steffen" .
